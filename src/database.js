@@ -3,7 +3,9 @@ const path = require('path');
 const fs = require('fs');
 
 const DB_PATH = process.env.DB_PATH || (
-    process.env.RENDER ? path.join('/var/data', 'cafe.db') : path.join(__dirname, '..', 'data', 'cafe.db')
+    process.env.RENDER ? path.join('/var/data', 'cafe.db') :
+    process.env.VERCEL ? path.join('/tmp', 'cafe.db') :
+    path.join(__dirname, '..', 'data', 'cafe.db')
 );
 let db;
 
