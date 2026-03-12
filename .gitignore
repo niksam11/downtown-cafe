@@ -1,0 +1,8 @@
+node_modules/
+data/cafe.db
+data/cafe.db-shm
+data/cafe.db-wal
+.env
+*.log
+.DS_Store
+Thumbs.db
